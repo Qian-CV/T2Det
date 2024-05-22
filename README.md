@@ -21,20 +21,20 @@ How to utilize the dynamic perception of PG-DRFNet can be referenced to [here](d
 
 ### Results and models
 
-#### 1. DOTA-V2.0
+
+#### 1. VEDAI
+
+|   Model   |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
+| :-------: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| PG-DRFNet | 84.06 | le90  |   12x   |     4      | [pg_drfnet-12x-vedai](./configs/PG-DRFNet/VEDAI/pg_drfnet-12x-vedai.py) | [model](https://drive.google.com/file/d/1SSPv49ms1Vs9tGHj48TZ3zdjqaVAWASo/view?usp=sharing) \|[log](./tools/work_dirs/PG-DRFNet/VEDAI_log.log) |
+
+#### 2. HRSC2016
 
 |                    Model                     |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
 | :------------------------------------------: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | [RTMDet-M](https://arxiv.org/abs/2212.07784) | 57.71 | le90  |   6x    |     8      |                              -                               | [model](https://drive.google.com/file/d/1_fTCD_vKP3rrCnvSkHgeOOEzBjc3n55-/view?usp=sharing) |
-|                  PG-DRFNet                   | 59.01 | le90  |   6x    |     8      | [pg_drfnet-6x-dota2](./configs/PG-DRFNet/DOTA2_0/pg_drfnet-6x-dota2.py) | [model](https://drive.google.com/file/d/17ARF2Dv__Fl94EOWFnH4w9ZeBtJ_dJkY/view?usp=drive_link) \| [log](./tools/work_dirs/PG-DRFNet/DOTA_log.log) |
+|                  PG-DRFNet                   | 59.01 | le90  |   6x    |     8      | [pg_drfnet-6x-dota2](./configs/PG-DRFNet/DOTA2_0/pg_drfnet-6x-dota2.py) | [model](https://drive.google.com/file/d/1RT7sitAzAcmMcXiLQ4nYavxJBmvXoiBz/view?usp=sharing) \| [log](./tools/work_dirs/PG-DRFNet/DOTA_log.log) |
 
-*NOTE: Since the DOTA-V2.0 set requires online testing, the mAP shown in log is used as a reference by randomly verifying the 20% of training set. We submitted the final model online for testing at [DOTA](https://captain-whu.github.io/DOTA/dataset.html).
-
-#### 2. VEDAI
-
-|   Model   |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
-| :-------: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| PG-DRFNet | 84.06 | le90  |   12x   |     4      | [pg_drfnet-12x-vedai](./configs/PG-DRFNet/VEDAI/pg_drfnet-12x-vedai.py) | [model](https://drive.google.com/file/d/17ARF2Dv__Fl94EOWFnH4w9ZeBtJ_dJkY/view?usp=drive_link) \|[log](./tools/work_dirs/PG-DRFNet/VEDAI_log.log) |
 
 For example, when dataset is DOTA2.0 and method is PG-DRFNet, you can train by running the following
 
