@@ -33,7 +33,7 @@ How to utilize the dynamic perception of T<sup>2</sup>Det can be referenced to [
 
 |  Model  |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
 | :-----: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| T<sup>2</sup>Det | 90.66 | le90  |   6x    |     8      | [t2det-hrsc2016](./configs/exp_configs/t2det/hrsc/t2det_rtmdet_m-6x-hrsc.py) | [model](https://drive.google.com/file/d/1RT7sitAzAcmMcXiLQ4nYavxJBmvXoiBz/view?usp=sharing) \| [log](./tools/work_dirs/t2det/DOTA_log.log) |
+| T<sup>2</sup>Det | 90.66 | le90  |   6x    |     8      | [t2det-hrsc2016](./configs/exp_configs/t2det/hrsc/t2det_rtmdet_m-6x-hrsc.py) | [model](https://drive.google.com/file/d/1RT7sitAzAcmMcXiLQ4nYavxJBmvXoiBz/view?usp=sharing) \| [log](./tools/work_dirs/t2det/HRSC2016_log.log) |
 
 
 For example, when dataset is VEDAI and method is T<sup>2</sup>Det, you can train by running the following
