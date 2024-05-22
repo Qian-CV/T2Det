@@ -27,7 +27,7 @@ How to utilize the dynamic perception of T^2^Det can be referenced to [here](doc
 |                    Model                     |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
 | :------------------------------------------: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |                   T^2^Det                    | 85.15 | le90  |   6x    |     4      | [t2det-vedai](./configs\exp_configs\t2det\VEDAI\t2det_rtmdet_m-6x-vedai.py) | [model](https://drive.google.com/file/d/1SSPv49ms1Vs9tGHj48TZ3zdjqaVAWASo/view?usp=sharing) \|[log](./tools/work_dirs/PG-DRFNet/VEDAI_log.log) |
-| [RTMDet-M](https://arxiv.org/abs/2212.07784) | 83.32 | le90  |   6x    |     4      |                                                              | [model](https://drive.google.com/file/d/1_fTCD_vKP3rrCnvSkHgeOOEzBjc3n55-/view?usp=sharing) |
+| [RTMDet-M](https://arxiv.org/abs/2212.07784) | 83.32 | le90  |   6x    |     4      |                                                              | [model](https://drive.google.com/file/d/1WCXqfqfS9sslkJ2OOk8A1RmxOteLShaV/view?usp=sharing) |
 
 #### 2. HRSC2016
 
