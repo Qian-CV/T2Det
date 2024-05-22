@@ -1,16 +1,16 @@
-# Position Guided Dynamic Receptive Field Network: A Small Object Detection Friendly to Optical and SAR Images
+# T^2^Det: Twin-tower detector with geometric invariance for oriented object detection
 
 ![](docs/Figure/Fig1.png)
 
 ## Introduction
 
-This repository is the official implementation of "Position Guided Dynamic Receptive Field Network: A Small Object Detection Friendly to Optical and SAR Images" at [Please stay tuned!]
+This repository is the official implementation of "T^2^Det: Twin-tower detector with geometric invariance for oriented object detection" at [Please stay tuned!]
 
 The master branch is built on MMRotate which works with **PyTorch 1.8+**.
 
-PG-DRFNet's train/test configure files are placed under configs/PG-DRFNet/
+T^2^Det's train/test configure files are placed under configs/exp_configs/t2det/
 
-How to utilize the dynamic perception of PG-DRFNet can be referenced to [here](docs/en/tutorials/dynamic_perception.md).
+How to utilize the dynamic perception of T^2^Det can be referenced to [here](docs/en/tutorials/dynamic_perception.md).
 
 ## Deep Learning Experiments
 
@@ -24,19 +24,19 @@ How to utilize the dynamic perception of PG-DRFNet can be referenced to [here](d
 
 #### 1. VEDAI
 
-|   Model   |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
-| :-------: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| PG-DRFNet | 84.06 | le90  |   12x   |     4      | [pg_drfnet-12x-vedai](./configs/PG-DRFNet/VEDAI/pg_drfnet-12x-vedai.py) | [model](https://drive.google.com/file/d/1SSPv49ms1Vs9tGHj48TZ3zdjqaVAWASo/view?usp=sharing) \|[log](./tools/work_dirs/PG-DRFNet/VEDAI_log.log) |
+|                    Model                     |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
+| :------------------------------------------: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                   T^2^Det                    | 85.15 | le90  |   6x    |     4      | [t2det-vedai](./configs\exp_configs\t2det\VEDAI\t2det_rtmdet_m-6x-vedai.py) | [model](https://drive.google.com/file/d/1SSPv49ms1Vs9tGHj48TZ3zdjqaVAWASo/view?usp=sharing) \|[log](./tools/work_dirs/PG-DRFNet/VEDAI_log.log) |
+| [RTMDet-M](https://arxiv.org/abs/2212.07784) | 83.32 | le90  |   6x    |     4      |                                                              | [model](https://drive.google.com/file/d/1_fTCD_vKP3rrCnvSkHgeOOEzBjc3n55-/view?usp=sharing) |
 
 #### 2. HRSC2016
 
-|                    Model                     |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
-| :------------------------------------------: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| [RTMDet-M](https://arxiv.org/abs/2212.07784) | 57.71 | le90  |   6x    |     8      |                              -                               | [model](https://drive.google.com/file/d/1_fTCD_vKP3rrCnvSkHgeOOEzBjc3n55-/view?usp=sharing) |
-|                  PG-DRFNet                   | 59.01 | le90  |   6x    |     8      | [pg_drfnet-6x-dota2](./configs/PG-DRFNet/DOTA2_0/pg_drfnet-6x-dota2.py) | [model](https://drive.google.com/file/d/1RT7sitAzAcmMcXiLQ4nYavxJBmvXoiBz/view?usp=sharing) \| [log](./tools/work_dirs/PG-DRFNet/DOTA_log.log) |
+|  Model  |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
+| :-----: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| T^2^Det | 90.66 | le90  |   6x    |     8      | [t2det-hrsc2016](./configs\exp_configs\t2det\hrsc\t2det_rtmdet_m-6x-hrsc.py) | [model](https://drive.google.com/file/d/1RT7sitAzAcmMcXiLQ4nYavxJBmvXoiBz/view?usp=sharing) \| [log](./tools/work_dirs/PG-DRFNet/DOTA_log.log) |
 
 
-For example, when dataset is DOTA2.0 and method is PG-DRFNet, you can train by running the following
+For example, when dataset is VEDAI and method is T^2^Det, you can train by running the following
 
 ```bash
 python tools/train.py \
@@ -45,7 +45,7 @@ python tools/train.py \
   --load_from path/to/pre-trained/model \
 ```
 
-and if you want submit the DOTA2.0 results for online evaluation, you can run  as follows
+and if you want test the VEDAI results, you can run  as follows
 
 ```bash
 python tools/test.py \
@@ -101,4 +101,4 @@ The code is developed based on the following repositories. We appreciate their n
 
 ## Cite this repository
 
-If you use this software in your work, please cite it using the following metadata. Liuqian Wang, Jing Zhang, et. al. (2024). PG-DRFNet by BJUT-AI&VBD [Computer software]. https://github.com/BJUT-AIVBD/PG-DRFNet
+If you use this software in your work, please cite it using the following metadata. Liuqian Wang, Jing Zhang, et. al. (2024). T^2^Det by BJUT-AI&VBD [Computer software]. https://github.com/Qian-CV/T2Det.git
