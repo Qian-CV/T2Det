@@ -27,13 +27,13 @@ How to utilize the dynamic perception of T<sup>2</sup>Det can be referenced to [
 |                    Model                     |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
 | :------------------------------------------: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | [RTMDet-M](https://arxiv.org/abs/2212.07784) | 83.32 | le90  |   6x    |     4      |                                                              | [model](https://drive.google.com/file/d/1WCXqfqfS9sslkJ2OOk8A1RmxOteLShaV/view?usp=sharing) |
-|                   T<sup>2</sup>Det                    | 85.15 | le90  |   6x    |     4      | [t2det-vedai](./configs\exp_configs\t2det\VEDAI\t2det_rtmdet_m-6x-vedai.py) | [model](https://drive.google.com/file/d/1SSPv49ms1Vs9tGHj48TZ3zdjqaVAWASo/view?usp=sharing) \|[log](./tools/work_dirs/PG-DRFNet/VEDAI_log.log) |
+|               T<sup>2</sup>Det               | 85.15 | le90  |   6x    |     4      | [t2det-vedai](./configs/exp_configs/t2det/VEDAI/t2det_rtmdet_m-6x-vedai.py) | [model](https://drive.google.com/file/d/1SSPv49ms1Vs9tGHj48TZ3zdjqaVAWASo/view?usp=sharing) \|[log](./tools/work_dirs/PG-DRFNet/VEDAI_log.log) |
 
 #### 2. HRSC2016
 
 |  Model  |  mAP  | Angle | lr schd | Batch Size |                           Configs                            |                           Download                           |
 | :-----: | :---: | :---: | :-----: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| T<sup>2</sup>Det | 90.66 | le90  |   6x    |     8      | [t2det-hrsc2016](./configs\exp_configs\t2det\hrsc\t2det_rtmdet_m-6x-hrsc.py) | [model](https://drive.google.com/file/d/1RT7sitAzAcmMcXiLQ4nYavxJBmvXoiBz/view?usp=sharing) \| [log](./tools/work_dirs/PG-DRFNet/DOTA_log.log) |
+| T<sup>2</sup>Det | 90.66 | le90  |   6x    |     8      | [t2det-hrsc2016](./configs/exp_configs/t2det/hrsc/t2det_rtmdet_m-6x-hrsc.py) | [model](https://drive.google.com/file/d/1RT7sitAzAcmMcXiLQ4nYavxJBmvXoiBz/view?usp=sharing) \| [log](./tools/work_dirs/PG-DRFNet/DOTA_log.log) |
 
 
 For example, when dataset is VEDAI and method is T<sup>2</sup>Det, you can train by running the following
