@@ -1,6 +1,6 @@
 # T<sup>2</sup>Det: Twin-tower detector with geometric invariance for oriented object detection
 
-![](docs/Figure/Fig1.png)
+![](docs/figures/fig1.png)
 
 ## Introduction
 
@@ -10,7 +10,7 @@ The master branch is built on MMRotate which works with **PyTorch 1.8+**.
 
 T<sup>2</sup>Det's train/test configure files are placed under configs/exp_configs/t2det/
 
-How to utilize the dynamic perception of T<sup>2</sup>Det can be referenced to [here](docs/en/tutorials/dynamic_perception.md).
+The Instructions of T<sup>2</sup>Det can be referenced to [here](docs/en/tutorials/t2det_tutorial.md).
 
 ## Deep Learning Experiments
 
@@ -40,8 +40,8 @@ For example, when dataset is VEDAI and method is T<sup>2</sup>Det, you can train
 
 ```bash
 python tools/train.py \
-  --config configs/PG-DRFNet/pg_drfnet-6x-dota2.py \
-  --work-dir work_dirs/PG-DRFNet \
+  --config configs/exp_configs/t2det/VEDAI/t2det_rtmdet_m-6x-vedai.py \
+  --work-dir work_dirs/t2det \
   --load_from path/to/pre-trained/model \
 ```
 
@@ -49,14 +49,14 @@ and if you want test the VEDAI results, you can run  as follows
 
 ```bash
 python tools/test.py \
-  --config configs/PG-DRFNet/pg_drfnet-6x-dota2.py \
-  --checkpoint path/to/gvt/model \
-  --cfg-options test_dataloader.dataset.ann_file=''  test_dataloader.dataset.data_prefix.img_path=test/images/ test_evaluator.format_only=True test_evaluator.merge_patches=True test_evaluator.outfile_prefix='path/to/save_dir'
+  --config configs/exp_configs/t2det/VEDAI/t2det_rtmdet_m-6x-vedai.py \
+  --checkpoint path/to/t2det/model.pth \
+  --cfg-options test_evaluator.outfile_prefix='path/to/save_dir'
 ```
 
 ### Hyperparameters Configuration
 
-Detailed hyperparameters config can be found in configs/base/ and configs/PG-DRFNet/
+Detailed hyperparameters config can be found in [t2det_configs](./configs/exp_configs/t2det/VEDAI/t2det_rtmdet_m-6x-vedai.py)
 
 ## Installation
 
@@ -85,7 +85,7 @@ We also provide some tutorials for:
 - [learn the config](docs/en/tutorials/customize_config.md)
 - [customize dataset](docs/en/tutorials/customize_dataset.md)
 - [customize model](docs/en/tutorials/customize_models.md)
-- [dynamic perception](docs/en/tutorials/dynamic_perception.md)
+- [tutorial of  T<sup>2</sup>Det](docs/en/tutorials/t2det_tutorial.md)
 - [useful tools](docs/en/tutorials/useful_tools.md)
 
 ## Acknowledgments
